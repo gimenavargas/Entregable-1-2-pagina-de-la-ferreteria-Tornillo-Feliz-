@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2>Registro de Usuario</h2>
+    <form id="registroForm">
+        <label for="nombres">Nombres:</label><br>
+        <input type="text" id="nombres" name="nombres" required><br>
+        
+        <label for="apellidos">Apellidos:</label><br>
+        <input type="text" id="apellidos" name="apellidos" required><br>
+        
+        <label for="correo">Correo Electrónico:</label><br>
+        <input type="email" id="correo" name="correo" required><br>
+        
+        <label for="numerocelular">Número de Celular:</label><br>
+        <input type="text" id="numerocelular" name="numerocelular" required><br>
+        
+        <label for="contraseña">Contraseña:</label><br>
+        <input type="password" id="contraseña" name="contraseña" required><br>
+        
+        <label for="repetircontraseña">Repetir Contraseña:</label><br>
+        <input type="password" id="repetircontraseña" name="repetircontraseña" required><br>
+        
+        <input type="submit" value="Registrarse">
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>
