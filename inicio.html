@@ -23,19 +23,21 @@
             <h2>Productos</h2>
             <div class="producto">
                 <img src="https://m.media-amazon.com/images/I/61Gann-hfQL._AC_UL320_.jpg" alt="Producto 1">
-                <p>LUCKSO Lampara Reflector LED </p>
-                <p>Portatil y Recargable </p>
-                <p>Precio: $40.90</p>
+                <p>LUCKSO Lampara Reflector  </p>
+                <p>LAMPARA LED  luckso</p>
+                <p>Precio: $ 40.90</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div>
             <div class="producto">
                 <img src="https://m.media-amazon.com/images/I/61r2jXYoz4L._AC_UL320_.jpg" alt="Producto 1">
+                <p>TRUPER </p>
                 <p>Rotomartillo </p>
                 <p>Precio: $610.50</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div><div class="producto">
                 <img src="https://m.media-amazon.com/images/I/71dM6tvXWNL._AC_UL320_.jpg" alt="Producto 1">
-                <p>Klatter Set De Herramientas Manuales</p>
+                <p>KLATER</p>
+                <p> Set De Herramientas Manuales</p>
                 <p>Precio: $549.00</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div><div class="producto">
@@ -47,12 +49,13 @@
             </div><div class="producto">
                 <img src="https://m.media-amazon.com/images/I/71bFoHS8IoL._AC_UL320_.jpg" alt="Producto 1">
                 <p>Bisagras para Mesa de Centro</p>
+                <p>Bisagras</p>
                 <p>Precio: $399.45</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div><div class="producto">
                 <img src="https://m.media-amazon.com/images/I/915XAcfbskL._AC_UL320_.jpg" alt="Producto 1">
-                <p>Petland 76650100197 Tunel</p>
-                <p>para Pequeños Animales</p>
+                <p> Tunel para Pequeños Animales</p>
+                <p>Tunel Petland </p>
                 <p>Precio: $498.05</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div><div class="producto">
@@ -62,31 +65,32 @@
                 <p>Precio: $348.70</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div><div class="producto">
-                <img src="phttps://m.media-amazon.com/images/I/518kii1jctL._AC_UL320_.jpg" alt="Producto 1">
+                <img src="https://m.media-amazon.com/images/I/518kii1jctL._AC_UL320_.jpg" alt="Producto 1">
                 <p>Politec Sellador (500 ml) de Superficies</p>
+                <p>Sellador </p>
                 <p>Precio: $83.66</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div><div class="producto">
                 <img src="https://m.media-amazon.com/images/I/71B48ZNGq1L._AC_UL320_.jpg" alt="Producto 1">
-                <p>Kokila Ganchos para Paneles, Gancho</p>
-                <p> Metal para Panel Ranurado Exhibipanel,</p>
-                <p> para Tablero de Clavijas para</p>
-                <p>Tiendas de Conveniencia, Ferreterías y</p>
-                <p>Garajes, 10cm, 50Pk</p>
+                <p>Kokila Ganchos para Paneles</p>
+                <p>Tablero de Clavijas</p>
                 <p>Precio: $278.65</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div><div class="producto">
                 <img src="https://m.media-amazon.com/images/I/61pSbP8kPhL._AC_UL320_.jpg" alt="Producto 1">
+                <p>__</p>
                 <p>Ganchos de Techo</p>
                 <p>Precio: $289.99</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div><div class="producto">
                 <img src="https://m.media-amazon.com/images/I/51vISXCoqmL._AC_UL320_.jpg" alt="Producto 1">
+                <p>-</p>
                 <p>INCONTESTA Ganchos de agarre</p>
                 <p>Precio: $299.02</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
             </div><div class="producto">
                 <img src="https://m.media-amazon.com/images/I/61RLlSBgjKL._AC_UL320_.jpg" alt="Producto 1">
+                <p>-</p>
                 <p>Soporte para carretillas</p>
                 <p>Precio: $377.05</p>
                 <button class="agregar-carrito">Agregar al Carrito</button>
@@ -101,7 +105,23 @@
             </ul>
             <p>Total: <span id="total">0.00</span></p>
             <button id="vaciar-carrito">Vaciar Carrito</button>
+            <button id="comprar" onclick="mostrarFormulario()">Comprar</button>
         </aside>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Seleccionar Medio de Pago</h2>
+            <select id="medio-pago">
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+                <option value="Billetera Virtual">Yape, Plin, Tunky</option>
+            </select>
+            <label for="contacto">Número de Contacto:</label>
+            <input type="text" id="contacto" name="contacto">
+            <button onclick="realizarCompra()">Realizar Compra</button>
+        </div>
     </div>
 
     <footer>
