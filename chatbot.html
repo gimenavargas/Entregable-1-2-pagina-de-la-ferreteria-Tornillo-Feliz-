@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot PHP</title>
+</head>
+<body>
+    <div id="chatbox">
+        <!-- Aquí se mostrarán los mensajes del chat -->
+    </div>
+    <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+    <button onclick="sendMessage()">Enviar</button>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById("userInput").value;
+            displayMessage("Tú: " + userInput);
+            // Enviar la solicitud al servidor PHP
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "chatbot.php?userInput=" + userInput, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var response = xhr.responseText;
+                    displayMessage("Chatbot: " + response);
+                }
+            };
+            xhr.send();
+        }
+
+        function displayMessage(message) {
+            var chatbox = document.getElementById("chatbox");
+            chatbox.innerHTML += "<p>" + message + "</p>";
+        }
+    </script>
+</body>
+</html>
