@@ -3,22 +3,20 @@
 $responses = array(
     "Hola" => "¡Hola! ¿En qué puedo ayudarte?",
     "¿Cómo estás?" => "Estoy bien, gracias por preguntar.",
-    "Muestrame los productos "
-    "Adiós" => "¡Hasta luego! Si tienes más preguntas, estaré aquí.",
-
+    "Muestrame los productos" => obtenerProductos(), // Llamando a la función aquí
+    "Adiós" => "¡Hasta luego! Si tienes más preguntas, estaré aquí."
     // Puedes agregar más respuestas según tus necesidades
 );
 
 // Obtener la entrada del usuario desde la solicitud GET
-$userInput = $_GET["userInput"];
+$userInput = isset($_GET["userInput"]) ? $_GET["userInput"] : "";
 
 // Buscar la respuesta del chatbot
 $response = isset($responses[$userInput]) ? $responses[$userInput] : "Lo siento, no entiendo esa pregunta.";
 
 // Devolver la respuesta al cliente
 echo $response;
-?>
-<?php
+
 // Función para obtener una selección de productos de la base de datos
 function obtenerProductos() {
     // Configuración de la conexión a la base de datos (modifica según tus credenciales)
@@ -57,7 +55,4 @@ function obtenerProductos() {
 
     return $botResponse;
 }
-
-// Llamar a la función para obtener los productos y mostrarlos en el chatbot
-echo obtenerProductos();
 ?>

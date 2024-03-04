@@ -3,13 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Chatbot PHP</title>
+    <style>
+        /* Estilos para el contenedor del chat */
+        #chat-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            overflow-y: auto; /* Agregar barra de desplazamiento vertical */
+            height: 300px; /* Altura fija para el contenedor de chat */
+        }
+
+        /* Estilos para los mensajes del usuario */
+        .user-message {
+            background-color: #e3f2fd;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 10px;
+        }
+
+        /* Estilos para los mensajes del chatbot */
+        .bot-message {
+            background-color: #c8e6c9;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 10px;
+        }
+
+        /* Estilos para el input del usuario */
+        #userInput {
+            width: calc(100% - 70px); /* Tamaño ajustado al contenedor del botón */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Estilos para el botón de enviar */
+        #sendButton {
+            width: 50px;
+            padding: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div id="chatbox">
-        <!-- Aquí se mostrarán los mensajes del chat -->
+    <div id="chat-container">
+        <div id="chatbox">
+            <!-- Aquí se mostrarán los mensajes del chat -->
+        </div>
     </div>
     <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
-    <button onclick="sendMessage()">Enviar</button>
+    <button id="sendButton" onclick="sendMessage()">Enviar</button>
 
     <script>
         function sendMessage() {
@@ -30,6 +83,8 @@
         function displayMessage(message) {
             var chatbox = document.getElementById("chatbox");
             chatbox.innerHTML += "<p>" + message + "</p>";
+            // Desplazarse hacia abajo automáticamente
+            chatbox.scrollTop = chatbox.scrollHeight;
         }
     </script>
 </body>
