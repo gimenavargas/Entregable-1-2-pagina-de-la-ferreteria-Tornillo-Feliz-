@@ -11,9 +11,9 @@
         <h1>Tienda Online</h1>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Carrito</a></li>
+                <li><a href="pag.html">Inicio</a></li>
+                <li><a href="inicio.html">Productos</a></li>
+                <li><a href="registro.html">Carrito</a></li>
             </ul>
         </nav>
     </header>
@@ -105,29 +105,16 @@
             </ul>
             <p>Total: <span id="total">0.00</span></p>
             <button id="vaciar-carrito">Vaciar Carrito</button>
-            <button id="comprar" onclick="mostrarFormulario()">Comprar</button>
+            <a href="comprar.html" class="btn btn-primary">Comprar</a>
         </aside>
     </div>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
-            <h2>Seleccionar Medio de Pago</h2>
-            <select id="medio-pago">
-                <option value="tarjeta">Tarjeta de Crédito</option>
-                <option value="efectivo">Efectivo</option>
-                <option value="transferencia">Transferencia Bancaria</option>
-                <option value="Billetera Virtual">Yape, Plin, Tunky</option>
-            </select>
-            <label for="contacto">Número de Contacto:</label>
-            <input type="text" id="contacto" name="contacto">
-            <button onclick="realizarCompra()">Realizar Compra</button>
-        </div>
-    </div>
+    
+
 
     <footer>
         <p>Derechos de Autor &copy; 2024 Tienda Online</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="carrito.js"></script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Realizar Pedido</h1>
+    </header>
+    
+    <div class="container">
+        <div class="formulario-compra">
+            <h2>Seleccionar Medio de Pago</h2>
+            <form id="formulario-compra">
+                <div>
+                    <label for="medio-pago">Medio de Pago:</label>
+                    <select id="medio-pago" name="medio-pago">
+                        <option value="tarjeta">Tarjeta de Crédito</option>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="transferencia">Transferencia Bancaria</option>
+                        
+                    </select>
+                </div>
+                <div>
+                    <label for="contacto">Número de Contacto:</label>
+                    <input type="text" id="contacto" name="contacto">
+                </div>
+                <button type="submit">Realizar Compra</button>
+                <a href="inicio.html" class="btn btn-primary">Regresar a Inicio</a>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tienda Online ("EL TORNILLO FELIZ")</p>
+    </footer>
+    <script src="compras.js"></script>
+</body>
+</html>

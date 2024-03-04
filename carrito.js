@@ -1,29 +1,3 @@
-function mostrarFormulario() {
-    const modal = document.getElementById('modal');
-    modal.style.display = 'block';
-}
-
-function cerrarModal() {
-    const modal = document.getElementById('modal');
-    modal.style.display = 'none';
-}
-
-function realizarCompra() {
-    const medioPago = document.getElementById('medio-pago').value;
-    const contacto = document.getElementById('contacto').value;
-
-    // Aquí puedes agregar la lógica para procesar la compra
-    alert(`Compra realizada con éxito. Medio de Pago: ${medioPago}. Contacto: ${contacto}`);
-
-    // Vaciar el carrito después de la compra
-    vaciarCarrito();
-    cerrarModal();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Resto del código JavaScript para el carrito de compras...
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     const agregarCarritoButtons = document.querySelectorAll('.agregar-carrito');
     agregarCarritoButtons.forEach(button => {
@@ -76,4 +50,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         actualizarCarrito();
     }
+    function realizarCompra() {
+        const medioPago = document.getElementById('medio-pago').value;
+        const contacto = document.getElementById('contacto').value;
+    
+        // Obtener los datos del carrito
+        const itemsCarrito = obtenerDatosCarrito();
+    
+        // Redireccionar a la página de compra con los parámetros
+        window.location.href = `compra.html?medioPago=${medioPago}&contacto=${contacto}&productos=${JSON.stringify(itemsCarrito)}`;
+    }
+    
+    function obtenerDatosCarrito() {
+        const itemsCarrito = [];
+        const itemsCarritoHTML = document.querySelectorAll('#lista-carrito li');
+    
+        itemsCarritoHTML.forEach(item => {
+            const nombre = item.textContent.split('-')[0].trim();
+            const precioString = item.textContent.split('-')[1].trim().split('x')[0].trim();
+            const precio = parseFloat(precioString.replace('$', ''));
+            itemsCarrito.push({ nombre, precio });
+        });
+    
+        return itemsCarrito;
+    }
+    
 });
+
