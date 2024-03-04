@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["usuario_apellidos"] = $row["apellidos"];
         
         // Redirigir a la página de inicio después del inicio de sesión exitoso
-        header("Location: pag.html");
+        header("Location: productos.html");
         exit();
     } else {
         // El usuario y la contraseña no coinciden, mostrar un mensaje de error
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="iniciar_sesion.css">
     
 </head>
 <body>
@@ -71,6 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php } ?>
                 <button type="submit">Iniciar Sesión</button>
                 <a href="registro.html" class="btn btn-primary">Registrarse</a>
+                
             </form>
         </div>
     </div>

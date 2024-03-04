@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemsCarrito = obtenerDatosCarrito();
     
         // Redireccionar a la página de compra con los parámetros
-        window.location.href = `compra.html?medioPago=${medioPago}&contacto=${contacto}&productos=${JSON.stringify(itemsCarrito)}`;
+        window.location.href = `comprar.html?medioPago=${medioPago}&contacto=${contacto}&productos=${JSON.stringify(itemsCarrito)}`;
     }
     
     function obtenerDatosCarrito() {

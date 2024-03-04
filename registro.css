@@ -1,0 +1,65 @@
+body {
+
+        margin: 0;
+        padding: 80;
+        width: 100%;
+        height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana del navegador */
+        background-image: url("https://c8.alamy.com/compes/2c9a293/herramientas-de-construccion-sobre-fondo-de-madera-bastidor-de-la-herramienta-2c9a293.jpg");
+        background-size: cover; /* La imagen se ajustará para que se vea completa */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen horizontalmente y verticalmente */
+        font-family: Arial, sans-serif;
+    }
+
+h2 {
+    text-align: center;
+    color: #b87333; /* Color de bronce brillante para el título */
+}
+
+#registroForm {
+    width: 300px;
+    margin: 20px auto; /* Agregando margen superior e inferior y centrando horizontalmente */
+    background-color: #d2d2d2; /* Color de fondo para el formulario */
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#registroForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Color de texto gris oscuro para las etiquetas */
+}
+
+#registroForm input[type="text"],
+#registroForm input[type="email"],
+#registroForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#registroForm input[type="submit"],
+#registroForm a.btn {
+    display: inline-block;
+    background-color: #b87333; /* Color de bronce brillante para botones */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#registroForm input[type="submit"]:hover,
+#registroForm a.btn:hover {
+    background-color: #954f27; /* Color de bronce oscuro en hover */
+}
+
+#resultado {
+    text-align: center;
+    margin-top: 20px;
+}

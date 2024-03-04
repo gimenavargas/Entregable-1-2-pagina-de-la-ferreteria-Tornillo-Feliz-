@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        .container .producto img{
+            padding: 20px;
+        }
+        .producto {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .carrito {
+            background-color: #F4A460; /* Color melón */
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 10px;
+            width: 50%; /* Ancho horizontal del contenedor */
+            margin-left: auto; /* Centrado horizontalmente */
+            margin-right: auto; /* Centrado horizontalmente */
+        }
+        
+        .carrito h2 {
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+        
+        .carrito h2 img {
+            margin-right: 10px;
+        }
+        
+        .carrito p {
+            color: #fff;
+        }
+        
+        .carrito button {
+            background-color: #C0C0C0; /* Color botones fierro */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-right: 10px; /* Espacio entre botones */
+        }
+        
+        .carrito button:hover {
+            background-color: #808080; /* Cambio de color al pasar el ratón */
+        }
+        
+        .btn-primary {
+            background-color: #007bff; /* Color botón primario */
+            border-color: #007bff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3; /* Cambio de color al pasar el ratón */
+            border-color: #0056b3;
+        }
+        
+        
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Tienda Online</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="iniciar_sesion.php">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/61Gann-hfQL._AC_UL320_.jpg" alt="Producto 1">
+                    <p>LUCKSO Lampara Reflector</p>
+                    <p>LAMPARA LED luckso</p>
+                    <p>Precio: $40.90</p>
+                    <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/61r2jXYoz4L._AC_UL320_.jpg" alt="Producto 1"><br><br>
+                <p>TRUPER </p>
+                <p>Rotomartillo </p>
+                <p>Precio: $610.50</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71dM6tvXWNL._AC_UL320_.jpg" alt="Producto 1"><br><br>
+                <p>KLATER</p>
+                <p> Set De Herramientas Manuales</p>
+                <p>Precio: $549.00</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/61ZBAHwVsLL._AC_UL320_.jpg" alt="Producto 1">
+                <p>Arthome Vinilo </p>
+                <p>Aluminio Vidrio Protector Solar</p>
+                <p>Precio: $16.99</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71bFoHS8IoL._AC_UL320_.jpg" alt="Producto 1">
+                <p>Bisagras para Mesa de Centro</p>
+                <p>Bisagras</p>
+                <p>Precio: $399.45</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/915XAcfbskL._AC_UL320_.jpg" alt="Producto 1"><br><br><br><br><br><br>
+                <p> Tunel para Pequeños Animales</p>
+                <p>Tunel Petland </p>
+                <p>Precio: $498.05</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71yV+J+f6XL._AC_UL320_.jpg" alt="Producto 1">
+                <p>Bolsas Herramientas, Bolsos </p>
+                <p>Portaherramientas </p>
+                <p>Precio: $348.70</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/518kii1jctL._AC_UL320_.jpg" alt="Producto 1">
+                <p>Politec Sellador (500 ml) de Superficies</p>
+                <p>Sellador </p>
+                <p>Precio: $83.66</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71B48ZNGq1L._AC_UL320_.jpg" alt="Producto 1">
+                <p>Kokila Ganchos para Paneles</p>
+                <p>Tablero de Clavijas</p>
+                <p>Precio: $278.65</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/61pSbP8kPhL._AC_UL320_.jpg" alt="Producto 1">
+                <p>__</p>
+                <p>Ganchos de Techo</p>
+                <p>Precio: $289.99</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/51vISXCoqmL._AC_UL320_.jpg" alt="Producto 1">
+                <p>-</p>
+                <p>INCONTESTA Ganchos de agarre</p>
+                <p>Precio: $299.02</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div><div class="producto">
+                <img src="https://m.media-amazon.com/images/I/61RLlSBgjKL._AC_UL320_.jpg" alt="Producto 1">
+                <p>-</p>
+                <p>Soporte para carretillas</p>
+                <p>Precio: $377.05</p>
+                <button class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+            </div>
+            <!-- Otros productos aquí -->
+        </div>
+        
+        <aside class="carrito">
+            <p><tr>CARRITO DE COMPRAS</tr></p>
+            <ul id="lista-carrito">
+                <!-- Contenido del carrito -->
+            </ul>
+            <p>Total: <span id="total">0.00</span></p>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+            <a href="comprar.html" class="btn btn-primary">Comprar</a>
+        </aside>
+    </div>
+    
+
+
+
+
+<footer class="footer">
+    <div class="container">
+        <p>Derechos de Autor &copy; 2024 Tienda Online</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="carrito.js"></script>
+</body>
+</html>
