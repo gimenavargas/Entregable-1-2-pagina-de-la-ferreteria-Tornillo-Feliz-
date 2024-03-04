@@ -4,7 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compra</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .formulario-compra {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .formulario-compra h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        .formulario-compra label {
+            font-weight: bold;
+        }
+        .formulario-compra input[type="text"],
+        .formulario-compra select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .formulario-compra button[type="submit"],
+        .formulario-compra .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .formulario-compra button[type="submit"]:hover,
+        .formulario-compra .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,21 +74,20 @@
         <div class="formulario-compra">
             <h2>Seleccionar Medio de Pago</h2>
             <form id="formulario-compra">
-                <div>
+                <div class="form-group">
                     <label for="medio-pago">Medio de Pago:</label>
-                    <select id="medio-pago" name="medio-pago">
+                    <select id="medio-pago" name="medio-pago" class="form-control">
                         <option value="tarjeta">Tarjeta de Crédito</option>
                         <option value="efectivo">Efectivo</option>
                         <option value="transferencia">Transferencia Bancaria</option>
-                        
                     </select>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="contacto">Número de Contacto:</label>
-                    <input type="text" id="contacto" name="contacto">
+                    <input type="text" id="contacto" name="contacto" class="form-control">
                 </div>
-                <button type="submit">Realizar Compra</button>
-                <a href="inicio.html" class="btn btn-primary">Regresar a Inicio</a>
+                <button type="submit" class="btn btn-primary">Realizar Pedido</button>
+                <a href="productos.html" class="btn btn-primary">Regresar</a>
             </form>
         </div>
     </div>
